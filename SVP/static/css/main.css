@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    background-color: white;
+}
+
+.content {
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 400px;
+    padding: 0px;
+}
+
+.heading {
+    margin: 0 auto;
+    margin-top: 0px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    text-align: center;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+#content {
+    width: 70%;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h4 {
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    padding: 5px 0px;
+  }
+
+  .item {
+    margin: 1px;
+  }
+
+  .form-inline {
+    margin-top: 5px;
+  }
+
+  text {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .order {
+    margin-bottom: 8px;
+  }
+
+  .select {
+    margin: 5px;
+  }

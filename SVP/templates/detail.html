@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>Reporte en Detalle </h1>
+    <form action="/index/{{user.id}}" method="GET">
+        <input type="submit" class="item btn btn-outline-dark btn-sm" value = "Volver">
+    </form>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Fecha</th>
+                <th>Entrada</th>
+                <th>Salida</th>
+                <th>Notas</th>
+
+            </tr>
+        </thead>
+            <tr>
+                <td> {{ report.date }} </td>
+                <td> {{ report.entry }} </td>
+                <td> {{ report.exit }} </td>
+                <td> {{ report.notes }} </td>
+
+            </tr>
+
+    </table>
+
+    <div class="buttons">
+        <form action="/edit/{{user.id}}/{{report.id}}" method="GET">
+            <input type="submit" class="item btn btn-outline-dark btn-sm" value = "Editar">
+        </form>
+
+        <form action="/delete/{{user.id}}/{{report.id}}" method="GET">
+            <input type="submit" class="item btn btn-outline-dark btn-sm" value = "Borrar">
+        </form>
+    </div>
+
+    <h6>{{text}}</h6>
+
+{% endblock %}

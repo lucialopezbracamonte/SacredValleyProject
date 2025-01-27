@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <img src="/static/images/svplogo.png" alt="SVP Logo">
+
+    <table class = "table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Usuarios</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr onclick="window.location.href='/index/{{user.id}}';">
+                <td>{{ user.name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <form action="/password" method="GET">
+    <input type="submit" class="btn btn-outline-dark" value = "Admin">
+    </form>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+{{user_id}}
+{% block body %}
+<div class="content">
+    <h1>Editar un reporte </h1>
+
+    <form action="/edit/{{user_id}}/{{report.id}}" method="POST">
+        <table>
+            <tr>
+                <th>Fecha</th>
+                <th>Entrada</th>
+                <th>Salida</th>
+                <th>Notas</th>
+            </tr>
+                <tr>
+                    <td> <input type="date" name = "date" value="{{report.date}}"> </td>
+                    <td> <input type="time" name = "entry" value="{{entry}}"> </td>
+                    <td> <input type="time" name = "exit" value="{{exit}}"> </td>
+                    <td> <input type="text" name = "notes" value="{{report.notes}}"> </td>
+                </tr>
+        </table>
+
+        <input type="submit" value = "Editar">
+
+    </form>
+
+    <form action="/detail/{{user_id}}/{{report.id}}" method="GET">
+        <input type="submit" value = "Cancelar">
+    </form>
+
+
+
+{% endblock %}
